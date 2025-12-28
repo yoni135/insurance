@@ -48,7 +48,7 @@
 
 .service-card .card-home
 {	
-	background: url("../img/home-insurance.png");
+	background: url("../img/home-insurance.jpg");
 	background-position: center center;
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -56,7 +56,7 @@
 
 .service-card .card-auto
 {	
-	background: url("../img/auto-insurance.png");
+	background: url("../img/auto-insurance.jpg");
 	background-position: center center;
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -64,7 +64,7 @@
 
 .service-card .card-vacation
 {	
-	background: url("../img/vacation-insurance.png");
+	background: url("../img/vacation-insurance.jpg");
 	background-position: center center;
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -72,7 +72,7 @@
 
 .service-card .card-belonging
 {	
-	background: url("../img/belongings-insurance.png");
+	background: url("../img/belongings-insurance.jpg");
 	background-position: center center;
 	background-repeat: no-repeat;
 	background-size: cover;

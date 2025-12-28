@@ -311,7 +311,7 @@ nav ul.dropdown-list
   width: 40px;
   height: 40px;
   background: var(--blue-color);
-  color: #white;
+  color: white;
   border: none;
   cursor: pointer;
   display: none;
@@ -447,7 +447,11 @@ nav ul.dropdown-list
 
 .hero-content
 {
-	padding: 0 2rem 3.6rem 2rem;
+	padding-top: 10px; /* Reduced from 20px to move up */
+    padding-left: 30px; /* Reduced from 40px to move left */
+    position: relative;
+    top: -230px; /* This will pull it up even more */
+    left: -20px; /* This will pull it left even more */
 }
 
 .hero-heading

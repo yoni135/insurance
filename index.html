@@ -93,8 +93,10 @@
 					<h2 class="heading">
 						MISSION: <p class = "para-line"> Provide professional comprehensive insurance brokerage service and ongoing support in claims and coverage reviews which exceeds customer expectation.</p>
 					</h2>
-					<p class = "para-line"> Our Company is a licensed and independent insurance brokerage firm committed to providing expert risk management and comprehensive insurance solutions to individuals, businesses, and institutions across Ethiopia. With a strong foundation built on trust, professionalism, and customer focus, we act as a bridge between clients and insurance companies.
-					</p>
+					<h2 class="heading">
+						ABOUT OUT COMPANY: <p class = "para-line"> Provide professional comprehensive insurance brokerage service and ongoing support in claims and coverage reviews which exceeds customer expectation.</p>
+					</h2>
+					
 
 					
 				</div>
@@ -112,7 +114,7 @@
 
 			<h4 class="sub-heading">Our services</h4>
 			<h2 class="heading">
-				Insurance Solutions
+				We arrange coverage for 
 			</h2>
 			
 
@@ -134,6 +136,22 @@
 					<p class="para-line">
 						Covering Fire & Lightning, Burglary, Money, Fidelity Guarantee, and more.
 					</p>
+					<div class="insurance-dropdown">
+						<div class="dropdown-content">
+							<div class="sub-insurance">
+								<h3 class="sub-insurance-heading">Engineering Insurance</h3>
+								<p class="para-line small">
+									Including Contractors' All Risks, Erection All Risks, Machinery Breakdown, Electronic Equipment, Boiler and Pressure Vessel.
+								</p>
+							</div>
+							<div class="sub-insurance">
+								<h3 class="sub-insurance-heading">Liability Insurance</h3>
+								<p class="para-line small">
+									Public, Product, Professional Indemnity, Employer's Liability, and Directors & Officers coverage.
+								</p>
+							</div>
+						</div>
+					</div>
 				</div>
 				<div class="service">
 					<h2 class="service-heading">Life & Takaful</h2>
@@ -144,7 +162,7 @@
 			</div>
 		</div>
 	</section>
-	<!-- Services section ends -->
+<!-- Services section ends -->
 
 
 	<!-- Overline section starts -->
@@ -232,22 +250,34 @@
 	<script>
 		// ------------------------ Scroll to top button --------------------
 		$(document).ready(function(){
-		  $(window).scroll(function(){
-		    if($(this).scrollTop() > 40)
-		    {
-		      $('#topBtn').fadeIn();
-		    }
-		    else
-		    {
-		      $('#topBtn').fadeOut();
-		    }
-		  });
-		  
-		   $("#topBtn").click(function(){
-		      $('html, body').animate({scrollTop: 0},800);
-		   });             
+			$(window).scroll(function(){
+				if($(this).scrollTop() > 40)
+				{
+					$('#topBtn').fadeIn();
+				}
+				else
+				{
+					$('#topBtn').fadeOut();
+				}
+			});
+			
+			$("#topBtn").click(function(){
+				$('html, body').animate({scrollTop: 0},800);
+			});             
+			
+			// ------------------------ Insurance Dropdown --------------------
+			// Hover functionality for General Insurance card
+			$('.service:nth-child(3)').hover(
+				function() {
+					// Mouse enter - show dropdown
+					$(this).find('.insurance-dropdown').stop().slideDown(200);
+				},
+				function() {
+					// Mouse leave - hide dropdown
+					$(this).find('.insurance-dropdown').stop().slideUp(200);
+				}
+			);
 		});
-		// ------------------------ Scroll to top button --------------------
 	</script>
 </body>
 </html>
