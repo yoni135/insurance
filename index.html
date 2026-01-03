@@ -82,86 +82,593 @@
 	<!-- Why us section starts -->
 	<section class="why-us">
 		<div class="container">
-			<div class="row">
-				<div class="col why-us-content">
-					<h4 class="sub-heading">Our Vision & Mission</h4>
-
-					<h2 class="heading">
-						VISION: <p class = "para-line"> To become preferred intermediary in Ethiopia </p>
-					</h2>
-
-					<h2 class="heading">
-						MISSION: <p class = "para-line"> Provide professional comprehensive insurance brokerage service and ongoing support in claims and coverage reviews which exceeds customer expectation.</p>
-					</h2>
-					<h2 class="heading">
-						ABOUT: <p class = "para-line"> Provide professional comprehensive insurance brokerage service and ongoing support in claims and coverage reviews which exceeds customer expectation.</p>
-					</h2>
+			<div class="values-container">
+				<!-- First Row: Vision & Mission -->
+				<div class="first-row">
+					<!-- Vision -->
+					<div class="inner-col vision-col">
+						<ion-icon name="telescope-outline"></ion-icon>
+						<h3 class="why-us-highlight-heading">Vision</h3>
+						<p class="para-line">
+							To become preferred intermediary in Ethiopia.
+						</p>
+					</div>
 					
-
-					
+					<!-- Mission -->
+					<div class="inner-col mission-col">
+						<ion-icon name="navigate-outline"></ion-icon>
+						<h3 class="why-us-highlight-heading">Mission</h3>
+						<p class="para-line">
+							Provide professional comprehensive insurance brokerage service and ongoing support in claims and coverage reviews which exceeds customer expectation.
+						</p>
+					</div>
 				</div>
+				
+				<!-- Second Row: Core Values -->
+				<div class="inner-col core-values-col">
+					<div class="core-values-header">
+						<ion-icon name="diamond-outline" class="core-values-main-icon"></ion-icon>
+						<h3 class="why-us-highlight-heading">Core Values</h3>
+						<p class="core-values-subtitle">The principles that guide everything we do</p>
+					</div>
+					
+					<div class="core-values-grid">
+						<!-- Mastery -->
+						<div class="core-value-card">
+							<div class="value-icon-wrapper">
+								<ion-icon name="school-outline"></ion-icon>
+							</div>
+							<h4 class="value-title">Mastery</h4>
+							<p class="value-description">
+								We strive for Mastery in all that we do, offering expert advice, deep industry knowledge, and continuous learning to deliver top-quality service and solutions to our clients.
+							</p>
+						</div>
+						
+						<!-- Agility -->
+						<div class="core-value-card">
+							<div class="value-icon-wrapper">
+								<ion-icon name="flash-outline"></ion-icon>
+							</div>
+							<h4 class="value-title">Agility</h4>
+							<p class="value-description">
+								Challenge the status quo with open mind, focus and speed. Responding quickly and effectively to changing client needs, market conditions, and risks.
+							</p>
+						</div>
+						
+						<!-- Integrity -->
+						<div class="core-value-card">
+							<div class="value-icon-wrapper">
+								<ion-icon name="shield-checkmark-outline"></ion-icon>
+							</div>
+							<h4 class="value-title">Integrity</h4>
+							<p class="value-description">
+								The foundation of our business. We operate with honesty, ethics, and fairness, always putting our clients' best interests at the centre of our services.
+							</p>
+						</div>
+						
+						<!-- Boldness -->
+						<div class="core-value-card">
+							<div class="value-icon-wrapper">
+								<ion-icon name="trending-up-outline"></ion-icon>
+							</div>
+							<h4 class="value-title">Boldness</h4>
+							<p class="value-description">
+								We embrace boldness in how we approach challenges. We are not afraid to think differently, adapt to change, and lead our clients confidently through new risks and opportunities.
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<style>
+				.values-container {
+					display: flex;
+					flex-direction: column;
+					gap: 30px;
+					max-width: 1200px;
+					margin: 0 auto;
+					padding: 20px;
+				}
+				
+				.first-row {
+					display: grid;
+					grid-template-columns: repeat(2, 1fr);
+					gap: 25px;
+					align-items: start;
+				}
+				
+				.inner-col {
+					background: white;
+					border-radius: 12px;
+					box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+					transition: all 0.3s ease;
+					display: flex;
+					flex-direction: column;
+					align-items: center;
+					text-align: center;
+				}
+				
+				/* Smaller Vision & Mission boxes */
+				.vision-col, .mission-col {
+					height: auto;
+					padding: 25px 20px !important; /* Smaller padding */
+					min-height: 280px; /* Reduced height */
+					display: flex;
+					flex-direction: column;
+					justify-content: center;
+				}
+				
+				.vision-col:hover, .mission-col:hover {
+					transform: translateY(-5px);
+					box-shadow: 0 15px 35px rgba(0,0,0,0.12);
+				}
+				
+				.vision-col {
+					border-top: 4px solid #3a86ff;
+				}
+				
+				.mission-col {
+					border-top: 4px solid #ff6b35;
+				}
+				
+				/* Core Values remains large */
+				.core-values-col {
+					grid-column: span 2;
+					padding: 50px;
+					background: linear-gradient(135deg, #f8fbff 0%, #f0f7ff 100%);
+					border: 2px solid #e3f2fd;
+					border-top: 5px solid #4cc9f0;
+					margin-top: 10px;
+				}
+				
+				.core-values-header {
+					text-align: center;
+					margin-bottom: 50px;
+				}
+				
+				.core-values-main-icon {
+					font-size: 56px;
+					color: #4cc9f0;
+					margin-bottom: 20px;
+				}
+				
+				.core-values-subtitle {
+					color: #5d6d7e;
+					font-size: 18px;
+					margin-top: 10px;
+					font-style: italic;
+				}
+				
+				.core-values-grid {
+					display: grid;
+					grid-template-columns: repeat(4, 1fr);
+					gap: 25px;
+				}
+				
+				.core-value-card {
+					background: white;
+					padding: 30px 25px;
+					border-radius: 12px;
+					text-align: center;
+					box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+					transition: all 0.3s ease;
+					height: 100%;
+					display: flex;
+					flex-direction: column;
+					align-items: center;
+				}
+				
+				.core-value-card:hover {
+					transform: translateY(-5px);
+					box-shadow: 0 12px 25px rgba(0,0,0,0.1);
+				}
+				
+				.value-icon-wrapper {
+					width: 70px;
+					height: 70px;
+					background: linear-gradient(135deg, #f0f7ff 0%, #e3f2fd 100%);
+					border-radius: 50%;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					margin-bottom: 20px;
+				}
+				
+				.value-icon-wrapper ion-icon {
+					font-size: 32px;
+					color: #3a86ff;
+					margin: 0;
+				}
+				
+				.value-title {
+					font-size: 20px;
+					color: #2c3e50;
+					margin-bottom: 15px;
+					font-weight: 600;
+				}
+				
+				.value-description {
+					color: #5d6d7e;
+					font-size: 14px;
+					line-height: 1.6;
+					margin: 0;
+					flex-grow: 1;
+				}
+				
+				/* Smaller icons for Vision & Mission */
+				.vision-col ion-icon,
+				.mission-col ion-icon {
+					font-size: 36px !important; /* Smaller icons */
+					margin-bottom: 15px !important;
+				}
+				
+				.vision-col ion-icon {
+					color: #3a86ff;
+				}
+				
+				.mission-col ion-icon {
+					color: #ff6b35;
+				}
+				
+				/* Smaller headings for Vision & Mission */
+				.vision-col .why-us-highlight-heading,
+				.mission-col .why-us-highlight-heading {
+					font-size: 22px !important; /* Smaller heading */
+					margin-bottom: 15px !important;
+				}
+				
+				/* Core Values heading remains large */
+				.core-values-col .why-us-highlight-heading {
+					font-size: 28px;
+					color: #2c3e50;
+					margin-bottom: 20px;
+					font-weight: 700;
+				}
+				
+				/* Smaller text for Vision & Mission */
+				.vision-col .para-line,
+				.mission-col .para-line {
+					font-size: 14px !important; /* Smaller text */
+					line-height: 1.6 !important;
+					margin: 0;
+					max-width: 350px;
+				}
+				
+				/* Responsive Design */
+				@media (max-width: 1200px) {
+					.core-values-grid {
+						grid-template-columns: repeat(2, 1fr);
+						gap: 30px;
+					}
+					
+					.core-value-card {
+						padding: 25px 20px;
+					}
+				}
+				
+				@media (max-width: 768px) {
+					.first-row {
+						grid-template-columns: 1fr;
+						gap: 20px;
+					}
+					
+					.vision-col, .mission-col {
+						padding: 20px 15px !important;
+						min-height: 240px;
+					}
+					
+					.core-values-col {
+						padding: 30px 20px;
+					}
+					
+					.core-values-grid {
+						grid-template-columns: 1fr;
+						gap: 25px;
+					}
+					
+					.core-values-main-icon {
+						font-size: 48px;
+					}
+					
+					.vision-col ion-icon,
+					.mission-col ion-icon {
+						font-size: 32px !important;
+					}
+					
+					.vision-col .why-us-highlight-heading,
+					.mission-col .why-us-highlight-heading {
+						font-size: 20px !important;
+					}
+				}
+				
+				@media (max-width: 480px) {
+					.values-container {
+						gap: 20px;
+						padding: 10px;
+					}
+					
+					.vision-col, .mission-col {
+						padding: 18px 12px !important;
+						min-height: 220px;
+					}
+					
+					.core-values-col {
+						padding: 25px 15px;
+					}
+					
+					.core-value-card {
+						padding: 20px 15px;
+					}
+					
+					.value-icon-wrapper {
+						width: 60px;
+						height: 60px;
+					}
+					
+					.value-icon-wrapper ion-icon {
+						font-size: 28px;
+					}
+				}
+			</style>
 				
 			</div>
 		</div>
 	</section>
 	<!-- Why us section ends -->
+	<!-- About section starts -->
+	<section class="about">
+		<div class="container">
+			<div class="row">
+				<div class="col">
+					<h4 class="sub-heading">About Us</h4>
+					<h2 class="heading">About Us</h2>
+					<p class="para-line">
+						Our Company is a licensed and independent insurance brokerage firm committed to providing expert risk management and comprehensive insurance solutions to individuals, businesses, and institutions across Ethiopia. With a strong foundation built on trust, professionalism, and customer focus, we act as a bridge between clients and insurance companies. We bring hands on experience in insurance & reinsurance operations, Customer service & Finance, ensuring that our clients receive the best coverage at competitive rates, with efficient service delivery.
+					</p>
+
+					
+
+					<button class="btn btn-blue ">
+						<a href="about.html">Read More</a>
+					</button>
+				</div>
+				
+			</div>
+
+			
+		</div>
+	</section>
+	<!-- About section ends -->
 
 
 	<!-- Services section starts -->
 	<section class="our-services">
 		<div class="container">
-			<img src="img/services.jpg" class="service-img" alt="Our Services" title="Our Services">
-
-			<h4 class="sub-heading">Our services</h4>
-			<h2 class="heading">
-				We arrange coverage for 
-			</h2>
-			
-
-			<div class="services">
-				<div class="service">
+			<div class="services-header">
+				<img src="img/services.jpg" class="service-img" alt="Our Services">
+				<div class="header-content">
+					<h4 class="sub-heading">Our services</h4>
+				</div>
+			</div>
+	
+			<div class="services-grid">
+				<div class="service-card">
+					<div class="service-icon">
+						<ion-icon name="shield-checkmark-outline"></ion-icon>
+					</div>
 					<h2 class="service-heading">Risk Assessment & Advisory</h2>
 					<p class="para-line">
 						Our goal is to reduce exposure and help you make informed decisions. Hence we evaluate your business or personal risk and provide expert advice on the appropriate insurance coverage.
 					</p>
 				</div>
-				<div class="service">
+				
+				<div class="service-card">
+					<div class="service-icon">
+						<ion-icon name="document-text-outline"></ion-icon>
+					</div>
 					<h2 class="service-heading">Insurance Placement</h2>
 					<p class="para-line">
 						We compare, and recommend insurance policies from local insurers. We negotiate favourable terms and conditions on your behalf.
 					</p>
 				</div>
-				<div class="service">
-					<h2 class="service-heading">General Insurance</h2>
-					<p class="para-line">
-						Covering Fire & Lightning, Burglary, Money, Fidelity Guarantee, and more.
-					</p>
-					<div class="insurance-dropdown" style="display: none;">
-						<div class="dropdown-content">
-							<div class="sub-insurance">
-								<h3 class="sub-insurance-heading">Engineering Insurance</h3>
-								<p class="para-line small">
-									Including Contractors' All Risks, Erection All Risks, Machinery Breakdown, Electronic Equipment, Boiler and Pressure Vessel.
-								</p>
-							</div>
-							<div class="sub-insurance">
-								<h3 class="sub-insurance-heading">Liability Insurance</h3>
-								<p class="para-line small">
-									Public, Product, Professional Indemnity, Employer's Liability, and Directors & Officers coverage.
-								</p>
-							</div>
-						</div>
+				
+				<div class="service-card">
+					<div class="service-icon">
+						<ion-icon name="cash-outline"></ion-icon>
 					</div>
-				</div>
-				<div class="service">
-					<h2 class="service-heading">Life & Takaful</h2>
+					<h2 class="service-heading">Claims management</h2>
 					<p class="para-line">
-						Comprehensive Life Insurance and Takaful solutions.
+						Assist the company by following up reported claims until payment is fully effected insurance companies.
 					</p>
 				</div>
 			</div>
 		</div>
 	</section>
+	
+	<style>
+		.our-services {
+			padding: 80px 20px;
+			background: #f8fafc;
+		}
+		
+		.container {
+			max-width: 1200px;
+			margin: 0 auto;
+		}
+		
+		/* Header with Image */
+		.services-header {
+			position: relative;
+			margin-bottom: 60px;
+			border-radius: 12px;
+			overflow: hidden;
+			box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+		}
+		
+		.service-img {
+			width: 100%;
+			height: 300px;
+			object-fit: cover;
+			display: block;
+		}
+		
+		.header-content {
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+			padding: 40px;
+		}
+		
+		.sub-heading {
+			color: white;
+			font-size: 1.8rem;
+			font-weight: 600;
+			letter-spacing: 1px;
+			margin: 0;
+			text-transform: uppercase;
+		}
+		
+		/* Services Grid */
+		.services-grid {
+			display: grid;
+			grid-template-columns: repeat(3, 1fr);
+			gap: 30px;
+		}
+		
+		.service-card {
+			background: white;
+			padding: 40px 30px;
+			border-radius: 12px;
+			box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+			transition: all 0.3s ease;
+			position: relative;
+			text-align: center;
+			border-top: 4px solid #3a86ff;
+		}
+		
+		.service-card:hover {
+			transform: translateY(-10px);
+			box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+		}
+		
+		.service-card:nth-child(2) {
+			border-top-color: #ff6b35;
+		}
+		
+		.service-card:nth-child(3) {
+			border-top-color: #4cc9f0;
+		}
+		
+		.service-icon {
+			width: 70px;
+			height: 70px;
+			margin: 0 auto 25px;
+			background: linear-gradient(135deg, #3a86ff 0%, #4cc9f0 100%);
+			border-radius: 50%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+		
+		.service-card:nth-child(2) .service-icon {
+			background: linear-gradient(135deg, #ff6b35 0%, #ff9e6d 100%);
+		}
+		
+		.service-card:nth-child(3) .service-icon {
+			background: linear-gradient(135deg, #7209b7 0%, #9d4edd 100%);
+		}
+		
+		.service-icon ion-icon {
+			font-size: 32px;
+			color: white;
+		}
+		
+		.service-heading {
+			font-size: 1.4rem;
+			color: #2c3e50;
+			margin-bottom: 20px;
+			font-weight: 600;
+			line-height: 1.3;
+		}
+		
+		.para-line {
+			color: #5d6d7e;
+			line-height: 1.7;
+			font-size: 1rem;
+			margin: 0;
+		}
+		
+		/* Responsive Design */
+		@media (max-width: 992px) {
+			.services-grid {
+				grid-template-columns: repeat(2, 1fr);
+			}
+			
+			.service-card:last-child {
+				grid-column: span 2;
+				max-width: 500px;
+				margin: 0 auto;
+			}
+		}
+		
+		@media (max-width: 768px) {
+			.our-services {
+				padding: 60px 15px;
+			}
+			
+			.services-header {
+				margin-bottom: 40px;
+			}
+			
+			.service-img {
+				height: 200px;
+			}
+			
+			.header-content {
+				padding: 25px;
+			}
+			
+			.sub-heading {
+				font-size: 1.5rem;
+			}
+			
+			.services-grid {
+				grid-template-columns: 1fr;
+				gap: 25px;
+			}
+			
+			.service-card:last-child {
+				grid-column: span 1;
+				max-width: 100%;
+			}
+			
+			.service-card {
+				padding: 30px 25px;
+			}
+		}
+		
+		@media (max-width: 480px) {
+			.service-card {
+				padding: 25px 20px;
+			}
+			
+			.service-icon {
+				width: 60px;
+				height: 60px;
+				margin-bottom: 20px;
+			}
+			
+			.service-icon ion-icon {
+				font-size: 28px;
+			}
+			
+			.service-heading {
+				font-size: 1.2rem;
+			}
+		}
+	</style>
 <!-- Services section ends -->
 
 
@@ -205,31 +712,7 @@
 	<!-- Overline section ends -->
 
 
-	<!-- About section starts -->
-	<section class="about">
-		<div class="container">
-			<div class="row">
-				<div class="col">
-					<h4 class="sub-heading">About the Company</h4>
-					<h2 class="heading">Our History</h2>
-					<p class="para-line">
-						Our Company is a licensed and independent insurance brokerage firm committed to providing expert risk management and comprehensive insurance solutions to individuals, businesses, and institutions across Ethiopia. With a strong foundation built on trust, professionalism, and customer focus, we act as a bridge between clients and insurance companies. We bring hands on experience in insurance & reinsurance operations, Customer service & Finance, ensuring that our clients receive the best coverage at competitive rates, with efficient service delivery.
-					</p>
-
-					
-
-					<button class="btn btn-blue ">
-						<a href="about.html">Read More</a>
-					</button>
-				</div>
-				
-			</div>
-
-			
-		</div>
-	</section>
-	<!-- About section ends -->
-
+	
 
 
 	<!--------------- Footer ------------------>
