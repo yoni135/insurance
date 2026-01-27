@@ -899,3 +899,90 @@ footer
 	}
 	/*-------------- Testimonial section styling ---------------*/
 }
+/* Insurance dropdown styles */
+.insurance-dropdown {
+    display: none;
+    position: absolute;
+    background: white;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+    border-radius: 10px;
+    padding: 20px;
+    width: 90%;
+    left: 5%;
+    top: 100%;
+    z-index: 100;
+    margin-top: 10px;
+    border: 1px solid #e0e0e0;
+}
+
+.service {
+    position: relative;
+}
+
+.dropdown-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.sub-insurance {
+    padding: 15px;
+    background: #f8f9fa;
+    border-radius: 8px;
+    border-left: 4px solid #2540ce;
+}
+
+.sub-insurance-heading {
+    font-size: 1.1rem;
+    color: #2540ce;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+.para-line.small {
+    font-size: 0.9rem;
+    line-height: 1.4;
+    color: #666;
+}
+
+/* Arrow indicator */
+.service:nth-child(3) .service-heading:after {
+    content: ' ▼';
+    font-size: 0.8em;
+    color: #2540ce;
+    margin-left: 5px;
+    transition: transform 0.3s;
+}
+
+.service:hover:nth-child(3) .service-heading:after {
+    transform: rotate(180deg);
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .dropdown-content {
+        grid-template-columns: 1fr;
+    }
+    
+    .insurance-dropdown {
+        width: 95%;
+        left: 2.5%;
+    }
+}
+
+/* Hover functionality */
+.service:hover .insurance-dropdown {
+    display: block;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
